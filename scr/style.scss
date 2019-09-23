@@ -455,7 +455,7 @@ a {
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.02);
   z-index: 2;
 
-  &:nth-child(2n-1) {
+  &:nth-child(odd) {
     align-self: flex-end;
   }
 
@@ -704,6 +704,151 @@ a {
       li:last-child {
         margin-right: 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-left: 10px;
+  }
+
+  .progress {
+    padding-left: 0;
+  }
+
+  .header {
+    &__rotate, 
+    &__social-bar {
+      display: none;
+    }
+
+    &__box {
+      width: 100%;
+    }
+
+    &__slider {
+      left: 10px;
+      width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .column {
+    &__content {
+      margin-right: 28px;
+    }
+  }
+  
+  .progress {
+    grid-gap: 28px;
+  }
+
+  .people {
+    grid-gap: 28px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .progress {
+    grid-template-columns: auto;
+    height: auto;
+  }
+
+  .square-blocks {
+    padding-top: 0;
+  }
+
+  .features {
+    background-image: none;
+  }
+
+  .testimonials{
+    height: auto;
+  }
+
+  .apply {
+    padding: 10px;
+  }
+
+  .people {
+    grid-template-columns: auto;
+  }
+  
+  .header {
+    &__heading{
+      margin-left: 10px;
+      text-align: center;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__nav {
+      margin-left: 20px;
+    }
+  }
+  .footer {
+    &__heading{
+      width: 100%;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 51px;
+
+    &__link {
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 362px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .small-heading {
+    width: 100%
+  }
+
+  .square-blocks {
+    grid-template-columns: 240px;
+    grid-template-rows: repeat(4, 256px);
+  }
+
+  .progress {
+    border: none;
+
+    &__main {
+      width: 100%;
+    }
+  }
+
+  .column {
+    flex-direction: column;
+    height: 100%;
+    padding-top: 28px;
+  }
+
+  .header {
+    &__heading {
+      margin: 10px;
+      font-size: 48px;
     }
   }
 }

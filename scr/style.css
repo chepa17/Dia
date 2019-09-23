@@ -400,7 +400,7 @@ a {
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.02);
   z-index: 2;
 }
-.square-block:nth-child(2n-1) {
+.square-block:nth-child(odd) {
   align-self: flex-end;
 }
 .square-block__id {
@@ -617,6 +617,128 @@ a {
 }
 .footer__nav ul li:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-left: 10px;
+  }
+
+  .progress {
+    padding-left: 0;
+  }
+
+  .header__rotate, .header__social-bar {
+    display: none;
+  }
+  .header__box {
+    width: 100%;
+  }
+  .header__slider {
+    left: 10px;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .column__content {
+    margin-right: 28px;
+  }
+
+  .progress {
+    grid-gap: 28px;
+  }
+
+  .people {
+    grid-gap: 28px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .progress {
+    grid-template-columns: auto;
+    height: auto;
+  }
+
+  .square-blocks {
+    padding-top: 0;
+  }
+
+  .features {
+    background-image: none;
+  }
+
+  .testimonials {
+    height: auto;
+  }
+
+  .apply {
+    padding: 10px;
+  }
+
+  .people {
+    grid-template-columns: auto;
+  }
+
+  .header__heading {
+    margin-left: 10px;
+    text-align: center;
+  }
+  .header__text {
+    display: none;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__nav {
+    margin-left: 20px;
+  }
+
+  .footer__heading {
+    width: 100%;
+  }
+  .footer__nav {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 51px;
+  }
+  .nav__link:last-child {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 362px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .small-heading {
+    width: 100%;
+  }
+
+  .square-blocks {
+    grid-template-columns: 240px;
+    grid-template-rows: repeat(4, 256px);
+  }
+
+  .progress {
+    border: none;
+  }
+  .progress__main {
+    width: 100%;
+  }
+
+  .column {
+    flex-direction: column;
+    height: 100%;
+    padding-top: 28px;
+  }
+
+  .header__heading {
+    margin: 10px;
+    font-size: 48px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
