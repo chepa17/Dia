@@ -748,6 +748,12 @@ a {
   .people {
     grid-gap: 28px;
   }
+
+  .footer {
+    &__nav {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -778,8 +784,9 @@ a {
   
   .header {
     &__heading{
-      margin-left: 10px;
+      margin: 10px;
       text-align: center;
+      font-size: 48px;
     }
 
     &__text {
@@ -797,10 +804,6 @@ a {
   .footer {
     &__heading{
       width: 100%;
-    }
-
-    &__nav {
-      display: none;
     }
   }
 
@@ -843,12 +846,5 @@ a {
     flex-direction: column;
     height: 100%;
     padding-top: 28px;
-  }
-
-  .header {
-    &__heading {
-      margin: 10px;
-      font-size: 48px;
-    }
   }
 }

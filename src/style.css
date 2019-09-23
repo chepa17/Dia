@@ -651,6 +651,10 @@ a {
   .people {
     grid-gap: 28px;
   }
+
+  .footer__nav {
+    display: none;
+  }
 }
 @media screen and (max-width: 900px) {
   .progress {
@@ -679,8 +683,9 @@ a {
   }
 
   .header__heading {
-    margin-left: 10px;
+    margin: 10px;
     text-align: center;
+    font-size: 48px;
   }
   .header__text {
     display: none;
@@ -694,9 +699,6 @@ a {
 
   .footer__heading {
     width: 100%;
-  }
-  .footer__nav {
-    display: none;
   }
 
   .nav {
@@ -733,11 +735,6 @@ a {
     flex-direction: column;
     height: 100%;
     padding-top: 28px;
-  }
-
-  .header__heading {
-    margin: 10px;
-    font-size: 48px;
   }
 }
 
