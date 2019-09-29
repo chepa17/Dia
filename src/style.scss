@@ -6,6 +6,12 @@ body {
   font-family: 'Muli', sans-serif;
   line-height: 1.5;
   background-color: #fcfcfd;
+  display: flex;
+}
+
+.contant {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 a {
@@ -14,6 +20,7 @@ a {
 
 .container {
   padding-left: 227px;
+  box-sizing: border-box;
 }
 
 .header {
@@ -169,7 +176,7 @@ a {
   align-items: center;
 
   &__heading {
-    width: 742px;
+    max-width: 742px;
   }
 
   &__text {
@@ -192,7 +199,7 @@ a {
 
   &__main {
     padding-top: 160px;
-    width: 362px;    
+    max-width: 362px;    
   }
 
   &__heading {
@@ -237,7 +244,7 @@ a {
   }
 
   &__text {
-    width: 263px;
+    max-width: 263px;
     font-size: 16px;
     color: #fff;
   }
@@ -378,7 +385,7 @@ a {
 }
 
 .small-heading {
-  width: 362px;
+  max-width: 362px;
   font-size: 32px;
   line-height: 1.4;
   font-weight: 900;
@@ -708,6 +715,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1650px) {
+  body {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     padding-left: 10px;
@@ -752,6 +765,8 @@ a {
   .footer {
     &__nav {
       display: none;
+      width: 10px;
+      height: 10px;
     }
   }
 }
@@ -760,6 +775,18 @@ a {
   .progress {
     grid-template-columns: auto;
     height: auto;
+  }
+
+  .welcome {
+    padding-left: 10px;
+
+    &__heading {
+      width: 100%;
+    }
+  }
+
+  .small-heading {
+    font-size: 24px;
   }
 
   .square-blocks {
@@ -776,10 +803,20 @@ a {
 
   .apply {
     padding: 10px;
+
+    &__text {
+      font-size: 16px;
+    }
   }
 
   .people {
     grid-template-columns: auto;
+  }
+
+  .slider {
+    &__intro {
+      left: 25px;
+    }
   }
   
   .header {
@@ -799,8 +836,13 @@ a {
 
     &__nav {
       margin-left: 20px;
+
+      &::before {
+        margin-right: 0;
+      }
     }
   }
+
   .footer {
     &__heading{
       width: 100%;
@@ -813,6 +855,8 @@ a {
     margin-bottom: 51px;
 
     &__link {
+      margin-right: 0;
+
       &:last-child {
         margin-left: 0;
       }
@@ -820,9 +864,15 @@ a {
   }
 }
 
-@media screen and (max-width: 362px) {
+@media screen and (max-width: 600px) {
   .footer {
     flex-direction: column;
+  }
+
+  .welcome{
+    &__text {
+      font-size: 16px;
+    }
   }
 
   .small-heading {
@@ -836,6 +886,8 @@ a {
 
   .progress {
     border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
 
     &__main {
       width: 100%;
@@ -846,5 +898,12 @@ a {
     flex-direction: column;
     height: 100%;
     padding-top: 28px;
+
+    &::before {
+      font-size: 36px;
+      width: 100%;
+      text-align: center;
+      left: 0;
+    }
   }
 }
