@@ -1,1 +1,1 @@
-[DEMO LINK](https://chepa17.github.io/Dia/index.html)
+[DEMO LINK](https://chepa17.github.io/Dia/src/index.html)
